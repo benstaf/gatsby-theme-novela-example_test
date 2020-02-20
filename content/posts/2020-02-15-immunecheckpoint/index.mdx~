@@ -1,8 +1,8 @@
 ---
-title: AI for pharma and precision medicine conference in San Francisco, winter 2020 - call for speakers
+title: How to better predict cancer immunotherapy results
 author: Mostapha Benhenda
-date: 2019-10-15
-hero: ./images/golden.jpg
+date: 2020-02-15
+hero: ./images/Keytruda.jpg
 excerpt: Immunotherapies provide long-lasting benefits against cancer, but predicting their success remains a challenge. 
 ---
 
@@ -117,8 +117,6 @@ My +3.7% improvement is a tiny contribution. However, the overall impact is not 
 -   for medical insurances (NHS, Medicare…),  **100 Million US dollars/year**  saved
 
 Moreover, pharma and biotech companies need to use the best predictors available, because predictors can  **make or break FDA approval**. In August 5, 2016, the pharma company Bristol-Myers Squibb failed FDA approval for Opdivo in lung cancer, because of improper  **patient selection for the clinical trial**. This failure provoked an immediate reaction of traders in Wall Street, and the company market value suddenly fell by  **20 Billion US dollars**.
-
-![](https://miro.medium.com/max/30/1*tIAgcgCAU-O50LfMJyLpsw.png?q=20)
 
 ![Bristol-Myers Squibb (BMY) lost  **$20 Billion** market value due to wrong patient selection in a clinical trial in immuno-oncology](https://miro.medium.com/max/744/1*tIAgcgCAU-O50LfMJyLpsw.png)
 
