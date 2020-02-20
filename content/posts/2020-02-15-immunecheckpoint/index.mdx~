@@ -1,0 +1,178 @@
+---
+title: AI for pharma and precision medicine conference in San Francisco, winter 2020 - call for speakers
+author: Mostapha Benhenda
+date: 2019-10-15
+hero: ./images/golden.jpg
+excerpt: Immunotherapies provide long-lasting benefits against cancer, but predicting their success remains a challenge. 
+---
+
+Immunotherapies are amazing drugs against cancer. They provide **long-lasting benefits**, with  **less side-effects**. However, they don’t work all the time. They still  **fail for too many patients,**  from 60% to 80% of them. It’s not even known how to correctly identify patients who will benefit from immunotherapies.
+
+In this blog post, I will present two of the best predictors of cancer immunotherapy outcomes,  **IMPRES**  and  **TIDE**. I will also show an easy way to combine them and improve their predictions. This will give a new  **combination biomarker**. Finally, I will make suggestions of practical ways to contribute to research on this topic.
+
+You can support my work by making a donation in the  [donor box here](https://donorbox.org/better-predict-cancer-immunotherapy-results).
+
+You can also ask for collaboration with me on this topic by  [filling the form](https://mostaphabenhenda.typeform.com/to/fPEidr).
+
+# What is cancer immunotherapy?
+
+Cancer is a disease where various body cells proliferate and become crazy. They run out of control from immune cells, which usually monitor and protect the body.
+
+
+
+  <iframe  style="margin:0 auto;" src="https://www.youtube.com/embed/jgJKaP0Sj5U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+  Immunotherapy is a treatment  **boosting immune cells**, to restore their capabilities against cancer. There are different types of immunotherapies, but I focused on  **Immune Checkpoints Inhibitors**, which are now the most popular. These drugs work by ‘inhibiting the inhibitors’ of  **killer**  **T cells**  of the immune system. Famous drugs include  **Opdivo**, by Bristol-Myers Squibb, and  **Keytruda**, by Merck & Co. Those two blockbusters had combined sales of almost  **14 Billion US dollars**  in 2018.
+  
+
+![Immune Checkpoint Inhibitors drugs](https://miro.medium.com/max/600/1*4yvfWZdI8dcJZrQnFuB01A.jpeg)
+
+To predict immunotherapy results, it’s necessary to look at what’s going on in the tumor. A good way to do that is to measure  **gene expression**  of cells.
+
+# What is gene expression data?
+
+Most human cells have the same genetic information: 20 000 genes, stored on 23 chromosomes pairs made of DNA.
+
+
+
+
+![Most cells have the same genetic information stored on DNA](https://miro.medium.com/max/768/1*oox3QULVv7GutnULujFuMA.jpeg)
+
+However, each cell does not express all of those genes uniformly. Gene expression happens when genes, stored on DNA, start producing other molecules called  **RNA**. In turn, RNA is translated into proteins. Proteins are the ‘doers’ of the cell. They perform cell activities.
+
+
+
+  <iframe  style="margin:0 auto;" src="https://www.youtube.com/embed/gG7uCskUOrA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+**Gene expression is the number of RNA**  **molecules**  that a particular gene produces. The type and state of a particular cell are characterized by a pattern of gene expression, called  **gene signature**. Gene expression is measured using a technique called ‘single-cell RNA sequencing’ (scRNA-seq).
+
+At a macroscopic scale, it’s also possible to consider the gene expression of a whole tumor, which is the average of the gene expressions of all the cells inside it. This macroscopic gene expression is measured with a technique called  **bulk RNA sequencing**. It’s a bit older and cheaper than scRNA-seq, because it looks at a more global scale, but it is still used in most cases.
+
+
+
+
+![](https://miro.medium.com/max/736/1*TVjkwYZUi-KNAjlVknV-Ww.jpeg)
+
+RNA sequencing machine
+
+So the data used for predictions is a  **gene expression matrix**, with genes in rows and patients tumors in columns.
+
+
+![Gene expression data
+](https://miro.medium.com/max/1280/1*Zzrcg56_cBacFR_pFLgDtQ.png)
+
+
+# How gene expression data can predict the outcome of cancer immunotherapy
+
+The first predictor is  **IMPRES**, for IMmuno-PREdictive Score ([paywalled article](https://www.nature.com/articles/s41591-018-0157-9), but free with  [Sci-Hub](https://en.wikipedia.org/wiki/Sci-Hub)).
+
+The idea is to look at a particular cancer type called ‘neuroblastoma’. It’s a nerve tissue cancer that usually affects children. In some fortunate cases, the cancer disappears naturally, by the natural action of the immune system.
+
+
+
+![Neuroblastoma: a cancer model for IMPRES
+](https://miro.medium.com/max/2700/1*r0Yp1-022ceUwKwZw6UEfA.jpeg)
+
+
+IMPRES corresponds to a gene signature of those desirable cases. IMPRES is then used as a predictor for the outcome of immunotherapy in all other cancers. It works pretty well: when tested on skin cancer, the IMPRES team reports  **state-of-the-art**  performance.
+
+The second predictor is  **TIDE**, for Tumor Immune Dysfunction and Exclusion ([paywalled article](https://www.nature.com/articles/s41591-018-0136-1), but free with  [Sci-Hub](https://en.wikipedia.org/wiki/Sci-Hub)). TIDE is actually the combination of two gene signatures, one for  **immune dysfunction**  and another for  **immune exclusion**.
+
+For the dysfunction signature, TIDE identifies genes influencing patient survival in the case when lots of immune T cells infiltrated the tumor (the tumor was “hot”, or “inflammed”). The idea is that if immune cells infiltrated the tumor, but the patient still dies, it means immune cells did not do their job.
+
+The exclusion signature is derived from the gene signatures of three cell types known to restrict T cell infiltration in tumors: cancer-associated fibroblasts, myeloid-derived suppressor cells, and the M2 subtype of tumor-associated macrophages. In this case, the tumor was “cold”, or “excluded”.
+
+
+
+![Immune dysfunction (left) and exclusion (right). Tumor cells in purple. Immune cells in yellow (cartoon) or green (picture). Source:  [Van der Woude et al.](https://www.cell.com/trends/cancer/references/S2405-8033(17)30192-9)](https://miro.medium.com/max/375/1*EuNWZbtV1EyRKPL_T_vOlA.jpeg)
+
+
+
+Like IMPRES, TIDE also reports  **state-of-the-art**  performance. By the way, both papers were simultaneously published in the same journal.
+
+# How to make better predictions
+
+I improved predictions of both IMPRES and TIDE by taking the  **average** of their prediction scores. I got  **+3.7% improvement**  over the state-of-the-art.
+
+Technical details are available in my preprint:
+
+Benhenda M. Prediction of clinical response to checkpoint blockade immunotherapy is improved with ensembling.  _OSF Preprints_; 2019.  [https://doi.org/10.31219/osf.io/r5ke4](https://doi.org/10.31219/osf.io/r5ke4)
+
+Averaging is one of the simplest  **ensembling method**  in machine learning. It works because each predictor is focused on different things, so averaging them can cancel out their mistakes.
+
+
+![Ensembling improves predictions](https://miro.medium.com/max/550/1*NT3a4cDCbBmPf2uebChWrw.jpeg)
+
+
+# Impact
+
+My +3.7% improvement is a tiny contribution. However, the overall impact is not negligible, because cancer is a huge global problem. At the current level of use of Keytruda (an immunotherapy with prescription depending on another predictor, TMB), the global impact could be:
+
+-   for patients,  **2000 human lives/year**  saved
+-   for medical insurances (NHS, Medicare…),  **100 Million US dollars/year**  saved
+
+Moreover, pharma and biotech companies need to use the best predictors available, because predictors can  **make or break FDA approval**. In August 5, 2016, the pharma company Bristol-Myers Squibb failed FDA approval for Opdivo in lung cancer, because of improper  **patient selection for the clinical trial**. This failure provoked an immediate reaction of traders in Wall Street, and the company market value suddenly fell by  **20 Billion US dollars**.
+
+![](https://miro.medium.com/max/30/1*tIAgcgCAU-O50LfMJyLpsw.png?q=20)
+
+![Bristol-Myers Squibb (BMY) lost  **$20 Billion** market value due to wrong patient selection in a clinical trial in immuno-oncology](https://miro.medium.com/max/744/1*tIAgcgCAU-O50LfMJyLpsw.png)
+
+
+
+Meanwhile, competitor Merck & Co decided to use a predictor (Tumor Mutation Burden) to select patients for the clinical trial of Keytruda, a drug very-very similar to Opdivo. Keytruda got FDA approval for lung cancer, and it became a  **success story**, with 7 Billion US dollars sales in 2018. A large share of this market would have been taken over by Opdivo, if Bristol-Myers Squibb had implemented  **better clinical trial design**.
+
+
+![Better clinical trial design helped Keytruda sustain robust sales growth](https://miro.medium.com/max/1200/1*pMSiMX6n725-Xu818tBOZA.png)
+
+
+# How you can contribute
+
+The first possible way to improve predictions is to build the average using the more than  **50 predictors**  currently available. You can also try other ensembling techniques, like  [**stacking**](http://blog.kaggle.com/2016/12/27/a-kagglers-guide-to-model-stacking-in-practice/).
+
+
+![You can try stacking classifiers](https://miro.medium.com/max/500/1*jKn-Ye3RvFOcdAF1Bkqx4g.png)
+
+
+You can also help finding  **more data**. More data is always more important than better algorithms. Most papers use fewer than 300 patients. That’s 0.3% of the estimated 100 000 patients treated with immune checkpoint inhibitors in 2018 around the world. The remaining 99.7% is buried elsewhere, in private medical records, or is not even collected.  **Cost of data is not the problem**: bulk RNA-sequencing is cheap,  [**$175/sample**](https://web.genewiz.com/rna-seq-175). It’s less than 0.25% of the cost of immunotherapy, which can reach up to $150 000/year/person in the United States (and at least $70 000/year in other countries).
+
+
+![Sequencing costs dropped, but clinical data is still scarce](https://miro.medium.com/max/3001/1*5LRYb9iQvtxPxZP0vmdzzg.jpeg)
+
+
+
+So data scarcity is artificial, and I guess the bottleneck is located in the  **bureaucracy**: med and pharma institutions are big, with a lot of  **inertia**, and they adopt technologies very slowly.
+
+
+![Bureaucracies, public or private, adopt change slowly](https://miro.medium.com/max/640/1*smgEJLy1xcgMnEQf7hnrIA.jpeg)
+
+One way to shake bureaucracy is activism.  **Data activists**  can accelerate  **data liberation**. Their role is even more important than data scientists, who are constrained by data scarcity. Activists can help bureaucracies realize that  **cancer lives matter**.
+
+
+![Activists can accelerate change in healthcare](https://miro.medium.com/max/386/1*hpDcobi3Qadjh-rm-NMLfg.jpeg)
+
+
+Finally, you can contribute by providing  **incentives**  and  **funding**  to this ecosystem. In particular, I think  **alternative ways**  to do research should be encouraged. They can grab  **low-hanging fruits** that remain under the radar of traditional research organizations.
+
+
+![A diverse research ecosystem can better grab low-hanging fruits](https://miro.medium.com/max/800/1*AE4jUJScLLw26bLP4Dlhsw.jpeg)
+
+
+For example, here in my work, I think that ensembling methods were under-appreciated in the immuno-oncology literature before because they were not the best strategy for building **Intellectual Property**. The averaged predictor is not self-contained, it depends on base predictors that are often proprietary, patented, or otherwise unavailable for commercial use. That’s not the most attractive direction for the industry, or for venture capitalists, who are looking for defensible IP. Likewise, this direction is not favored by academics either, who often use their university labs as launch pads for spin-offs.
+
+
+![Intellectual Property is key to the strategy of many private and public research organizations, but not all](https://miro.medium.com/max/700/1*qRYxhppC_DQL8zmrXXPiag.jpeg)
+
+In my opinion, that’s the reason why ensembling methods remained a  **blind spot** for the community, even though they are technically simple, and routinely used elsewhere. In conclusion, I think  **private initiative**, and private charity, will remain a critical element of the landscape.
+
+You can support my work by making a  **donation**  in the  [donor box](https://donorbox.org/better-predict-cancer-immunotherapy-results).
+
+You can ask for  **collaboration**  with me on this topic by  [filling the form](https://mostaphabenhenda.typeform.com/to/fPEidr).
+
+You can also  **share**  this blog post with your friends and colleagues.
+
+Initially appeared on [Medium](https://medium.com/the-ai-lab/how-to-better-predict-cancer-immunotherapy-results-f81747af75c8).
