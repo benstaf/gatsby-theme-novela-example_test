@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Melwy - blog`,
     name: `Melwy`,
-    siteUrl: `https://melwy.com/blog`,
+    siteUrl: `https://melwy.com`,
     description: `Blog - AI & data science for precision medicine and drug discovery`,
     hero: {
       heading: `Blog - AI & data science for precision medicine and drug discovery`,
