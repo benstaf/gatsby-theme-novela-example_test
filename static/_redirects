@@ -20,5 +20,8 @@
 /page-data/index/page-data.json https://vigorous-turing-75b09b.netlify.com/page-data/index/page-data.json 200!
 /sw.js https://vigorous-turing-75b09b.netlify.com/sw.js 200!
 
+#troisieme vague
+/workbox-v3.6.3/workbox-sw.js https://vigorous-turing-75b09b.netlify.com/workbox-v3.6.3/workbox-sw.js 200!
+/static/f5ae442490729e85c0ba7387e5344a41/d99b3/artist-banner.webp https://vigorous-turing-75b09b.netlify.com/static/f5ae442490729e85c0ba7387e5344a41/d99b3/artist-banner.webp 200!
 
 
