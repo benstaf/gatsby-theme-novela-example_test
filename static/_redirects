@@ -1,3 +1,16 @@
 
 # Redirect default Netlify subdomain to primary domain
 / https://keen-heisenberg-1e316d.netlify.com/ 200!
+
+#Redirect images
+/1-18352baebebf366ce914.js https://keen-heisenberg-1e316d.netlify.com/1-18352baebebf366ce914.js 200!
+/component---node-modules-gatsby-theme-musician-src-templates-landing-js-977b7dd26f8f5990fcec.js https://keen-heisenberg-1e316d.netlify.com/component---node-modules-gatsby-theme-musician-src-templates-landing-js-977b7dd26f8f5990fcec.js 200!
+/0-55bbb48304103cc6d176.js https://keen-heisenberg-1e316d.netlify.com/0-55bbb48304103cc6d176.js 200!
+/app-bf3fadc19a858eb4c946.js https://keen-heisenberg-1e316d.netlify.com/app-bf3fadc19a858eb4c946.js 200!
+/webpack-runtime-7aaea5ef33353d7ddff8.js https://keen-heisenberg-1e316d.netlify.com/webpack-runtime-7aaea5ef33353d7ddff8.js 200!
+/static/1a1bd0cf8cdad75431df71a39a8b1c08/26396/fortune.png https://keen-heisenberg-1e316d.netlify.com/static/1a1bd0cf8cdad75431df71a39a8b1c08/26396/fortune.png 200!
+/static/d78961b897ab8b46e1394b5449b77b82/26396/science.png https://keen-heisenberg-1e316d.netlify.com/static/d78961b897ab8b46e1394b5449b77b82/26396/science.png 200!
+/static/0f12875f0c8154d9fe30f1b7953f3602/26396/benchsci.png https://keen-heisenberg-1e316d.netlify.com/static/0f12875f0c8154d9fe30f1b7953f3602/26396/benchsci.png 200!
+/static/b50a303ddca20a0aec730b370f5bd3ea/26396/pharmatech.png https://keen-heisenberg-1e316d.netlify.com/static/b50a303ddca20a0aec730b370f5bd3ea/26396/pharmatech.png 200!
+/static/25ead0bcf2230f7bd699f267da28ab3c/26396/compchem.png https://keen-heisenberg-1e316d.netlify.com/static/25ead0bcf2230f7bd699f267da28ab3c/26396/compchem.png 200!
+/page-data/index/page-data.json https://keen-heisenberg-1e316d.netlify.com/page-data/index/page-data.json 200!
