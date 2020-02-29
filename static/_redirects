@@ -3,3 +3,10 @@
 / https://elated-varahamihira-3f7b9a.netlify.com/ 200!
 
 #Redirect images
+/page-data/index/page-data.json https://elated-varahamihira-3f7b9a.netlify.com/page-data/index/page-data.json 200!
+/sw.js https://elated-varahamihira-3f7b9a.netlify.com/sw.js 200!
+/page-data/404.html/page-data.json https://elated-varahamihira-3f7b9a.netlify.com/page-data/404.html/page-data.json 200!
+
+#deuxieme vague
+
+
