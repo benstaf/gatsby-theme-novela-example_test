@@ -1,20 +1,17 @@
 ---
-title: Coronavirus Covid-19 outbreak - how can AI help?
+title: Coronavirus - how can AI help?
 author: Mostapha Benhenda
 date: 2020-03-02
 hero: ./images/heroimagecovid.jpg
-excerpt: Coronavirus Covid-19 outbreak is going global. That’s the first major pandemic of the Artificial Intelligence era.
+excerpt: Coronavirus outbreak is going global. That’s the first major pandemic of the Artificial Intelligence era.
 ---
-
-
-
-Coronavirus Covid-19 outbreak is going global. That’s the first major pandemic of the Artificial Intelligence era. In this blog post, I review some AI technologies helping in this fight.
+The new coronavirus outbreak is going global. That’s the first major pandemic of the Artificial Intelligence era. In this blog post, I review some AI technologies helping in this fight.
 
 ### Contain outbreak
 
-With widespread smartphone adoption, it became possible to monitor and anticipate the spread of the virus, using social media data.
+With widespread smartphone adoption, it became possible to monitor and anticipate virus diffusion, using social media data.
 
-For example, a [multi-national team](https://www.medrxiv.org/content/10.1101/2020.01.30.20019844v3) predicted **virus arrival time** in different Chinese cities, using localisation data from [QQ social network](https://heat.qq.com/), and a linear regression algorithm. They also assessed the efficiency of containment measures by Chinese authorities.
+For example, a [multi-national team](https://www.medrxiv.org/content/10.1101/2020.01.30.20019844v3) built a predictive model of **virus arrival time** in different Chinese cities, using localisation data from [QQ social network](https://heat.qq.com/), and a linear regression algorithm. They also assessed the efficiency of containment measures by Chinese authorities.
 
 ![](https://cdn-images-1.medium.com/max/800/1*RDzEDPMb5NVheEur1Fg4Sg.png)
 
@@ -46,13 +43,13 @@ They predict [drug-target interaction](https://arxiv.org/abs/1908.06760) by comb
 
 ### Design new drugs
 
-A long-term project is to discover **new drugs from scratch**. It’s a long path, taking much more time than re-purposing tested and approved molecules.
+A long-term project is to discover **new drugs from scratch** against coronavirus Covid-19. It’s a long path, taking much more time than re-purposing tested and approved molecules.
 
 For example, at Michigan State University, USA, [a team generated molecule proposals](https://www.biorxiv.org/content/10.1101/2020.01.30.927889v1) using a GRU-autoencoder, combined with a Convolution Neural Network, and other techniques
 
 ![](https://cdn-images-1.medium.com/max/800/1*mph1mNnQyExtKUGIJ1hQgw.png)
 
-There are certainly simpler and less shiny algorithms, as I explained in a [previous blog post.](https://medium.com/the-ai-lab/you-didnt-need-deep-learning-to-generate-new-molecules-4c784747b2cc)
+There are certainly simpler algorithms, as I explained in a [previous blog post.](https://medium.com/the-ai-lab/you-didnt-need-deep-learning-to-generate-new-molecules-4c784747b2cc)
 
 ### And more!
 
