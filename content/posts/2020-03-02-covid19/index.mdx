@@ -1,0 +1,61 @@
+---
+title: Coronavirus Covid-19 outbreak - how can AI help?
+author: Mostapha Benhenda
+date: 2020-03-02
+hero: ./images/heroimagecovid.jpg
+excerpt: Coronavirus Covid-19 outbreak is going global. That’s the first major pandemic of the Artificial Intelligence era.
+---
+Coronavirus Covid-19 outbreak is going global. That’s the first major pandemic of the Artificial Intelligence era. In this blog post, I review some AI technologies helping in this fight.
+
+### Contain outbreak
+
+With widespread smartphone adoption, it became possible to monitor and anticipate the spread of the virus, using social media data.
+
+For example, a [multi-national team](https://www.medrxiv.org/content/10.1101/2020.01.30.20019844v3) predicted **virus arrival time** in different Chinese cities, using localisation data from [QQ social network](https://heat.qq.com/), and a linear regression algorithm. They also assessed the efficiency of containment measures by Chinese authorities.
+
+![](https://cdn-images-1.medium.com/max/800/1*RDzEDPMb5NVheEur1Fg4Sg.png)
+
+### Track infections
+
+China already deployed a national surveillance network of 200 Million security cameras, based on facial and faceless recognitions. I covered these technologies in this blog some years ago ([here](https://medium.com/the-ai-lab/artificial-intelligence-surveillance-is-overhyped-part-1-tips-to-escape-facial-recognition-78e3ffe5373a) and [here](https://medium.com/the-ai-lab/artificial-intelligence-surveillance-is-overhyped-part-2-tips-to-escape-faceless-recognition-f9a435a1aeae)). Now, this surveillance system is being upgraded with [fever detection](https://www.scmp.com/tech/policy/article/3049215/ai-firms-deploy-fever-detection-systems-beijing-help-fight-coronavirus), in order to quickly identify potentially infected people, and send warnings to people who have been exposed nearby.
+
+![](https://cdn-images-1.medium.com/max/800/1*4dDV_ZUePt-28WiiAtXcBA.jpeg)
+
+### Screen patients
+
+During this outbreak, hospitals are overloaded. For example, in France, many patients are sent back home without any screening, because doctors are [completely overwhelmed](http://www.leparisien.fr/societe/coronavirus-on-a-tellement-de-cas-suspects-qu-on-ne-peut-plus-depister-tout-le-monde-29-02-2020-8269836.php). In this context, **automated screening** from CT image scans can relieve human staff.
+
+![](https://cdn-images-1.medium.com/max/800/1*9WM3huIZl0q7qFWueik4nQ.jpeg)
+
+For example, a [team in Zhejiang, China](https://arxiv.org/abs/2002.09334), obtained 86.7 % accuracy, using a ResNet neural network model, with location-attention.
+
+![](https://cdn-images-1.medium.com/max/800/1*p8CcDFfoUXkWxKK9s-MCRw.png)
+
+### Repurpose drugs
+
+The fastest way to find cures is to **repurpose existing drugs**, eventually in combination. For example, an anti-malarial drug, Chloroquine, is already being tested against 2019-nCoV. There are thousands of commercially available molecules, and exponentially more combinations of them. This makes relevant a computational approach.
+
+In South Korea, Deargen company is using a [deep learning model to predict drug repurposing](https://www.biorxiv.org/content/10.1101/2020.01.31.929547v1).
+
+They predict [drug-target interaction](https://arxiv.org/abs/1908.06760) by combining a BERT transformer network for the drug candidate, and a Convolutional Neural Network for the target protein (belonging to the virus).
+
+![](https://cdn-images-1.medium.com/max/800/1*Okh9siDaaq67U_afm-QKUw.png)
+
+### Design new drugs
+
+A long-term project is to discover **new drugs from scratch**. It’s a long path, taking much more time than re-purposing tested and approved molecules.
+
+For example, at Michigan State University, USA, [a team generated molecule proposals](https://www.biorxiv.org/content/10.1101/2020.01.30.927889v1) using a GRU-autoencoder, combined with a Convolution Neural Network, and other techniques
+
+![](https://cdn-images-1.medium.com/max/800/1*mph1mNnQyExtKUGIJ1hQgw.png)
+
+There are certainly simpler and less shiny algorithms, as I explained in a [previous blog post.](https://medium.com/the-ai-lab/you-didnt-need-deep-learning-to-generate-new-molecules-4c784747b2cc)
+
+### And more!
+
+It’s possible to do more, a lot of data is being released to the public. For example:
+
+-   In China, the Global Health Drug Discovery Institute (GHDDI) launched [Targeting 2019-nCoV](https://ghddi-ailab.github.io/Targeting2019-nCoV/) data platform.
+-   In Europe, the European Bioinformatics Institute (EMBL-EBI) collected [coronavirus data resources](https://www.ebi.ac.uk/about/news/announcements/coronavirus-data).
+
+If you want to participate in data science projects about the coronavirus, join hundreds of data scientists from around the world in [our Slack group](https://join.slack.com/t/dsformedicine/shared_invite/enQtODA1MDc1NDQ4ODIyLTMzNWFiY2YwYmQ4NDBkYTE5ZWQ0NDQ4YmNiMGE5MmMyYWU5MTkyNjgzMDFiNjdjNjRhYWUwNDJjZThjZmQzZDM).
