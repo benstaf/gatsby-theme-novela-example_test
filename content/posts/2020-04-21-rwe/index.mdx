@@ -1,0 +1,108 @@
+---
+title: Coronavirus therapeutics: Real-World Evidence with AI can deliver results faster
+author: Mostapha Benhenda
+date: 2020-04-21
+hero: ./images/chloroquine.jpg
+excerpt: The Curie Institute, a cancer research center in Paris, launched the AI4Curie challenge, about AI for immunotherapy.
+
+---
+
+Coronavirus pandemic is all the rage around the world, and so is the race for cures. For example, several drugs are being repurposed: anti-malaria chloroquine, anti-Ebola Remdesivir, anti-flu Favipiravir, anti-IL-6R Tocilizumab…
+
+  
+
+However, most clinical results either involve small cohorts, and/or lack a control group.
+
+These methodological weaknesses generate heated controversies on social medias.
+
+![](https://paper-attachments.dropbox.com/s_3AEED641DCCE94BAD97655461814D8A7BCFCFF1E38325BF0C342CE79714C0B94_1587484705883_014-Thumbnail+1+1.png)
+
+# Randomized Controlled Trials vs. Real World Evidence
+
+  
+
+These controversies reflect the old methodological debate between Randomized Controlled Trials  (RCT) and Real World Evidence  (RWE)  (for a quick introduction, see [here](https://www.forbes.com/sites/davidshaywitz/2018/05/11/will-real-world-performance-replace-rcts-as-healthcares-most-important-standard/#41eb890f3557), or listen to this [podcast by a16z](https://16minutes.simplecast.com/episodes/16mins-rwe-rct-real-world-evidence-data-randomized-controlled-trial-fda-drugs-coronavirus-pandemic) from 10:21).
+
+  
+
+RCT are often perceived as the gold standard, because randomization removes all biases. However, RCT also have a lot of shortcomings. They are slow, expensive, and using placebo can be unethical. For example, French-led clinical trial Discovery is [struggling to recruit patients](https://www.decision-sante.com/actualites/breve/2020/03/27/les-patients-plebiscitent-lhydroxychloloroquine-et-refusent-detre-enroles-dans-lessai-discovery_29398), who are reluctant to enroll with only 20% chances of getting Hydroxy-chloroquine.
+
+  
+
+Moreover, some effects are too small to be detected in clinical trials. For example, no serious cardiac adverse effects were recorded in [177 malaria clinical trials](https://bmcmedicine.biomedcentral.com/articles/10.1186/s12916-018-1188-2) of 35,548 participants who received quinoline and related antimalarials  (including chloroquine). On the other hand, in real-world practice, lethal cardiac adverse events [happened](http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0066-782X2002001000009).
+
+  
+
+Real-world evidence is not only useful for monitoring rare events of toxicity. It is also increasingly used to establish efficiency. For example, in precision oncology  (my current field of interest), there's a shortage of patients meeting specific inclusion criteria. As a result, it's faster for Pharma companies to perform a single-arm trial, and build an artificial control arm from RWE using machine learning  (see Roche [video](https://youtu.be/JvG6WGEzU84?t=2975) and [paper](https://doi.org/10.2217/cer-2018-0032)). In 2019, there have even been [FDA approval](https://www.pharmaceutical-technology.com/comment/real-world-evidence-in-pharma/) for extending Pfizer's Ibrance to some breast cancers in men  (a rare disease), based on RWE from [Flatiron database](https://www.pfizer.com/news/press-release/press-release-detail/pfizer_presents_new_evidence_of_ibrance_palbociclib_effectiveness_in_hr_her2_metastatic_breast_cancer_patients_in_four_real_world_studies_at_esmo_congress_2019).
+
+![](https://paper-attachments.dropbox.com/s_3AEED641DCCE94BAD97655461814D8A7BCFCFF1E38325BF0C342CE79714C0B94_1587487401076_flatiron.png)
+
+# For a global database of Coronavirus Real World Data
+
+RWE methods can be applied to coronavirus data too. To that end, individual patient data needs to be available, with all relevant features  (age, comorbidities…). I didn't find such public database yet  (if you find anything, tell me please!).
+
+However, in this direction, some steps are being made. For example, Raoult's IHU Institute in Marseille is publishing data daily in their  "[Southern](https://www.mediterranee-infection.com/covid-19/) [France Morning Post](https://www.mediterranee-infection.com/covid-19/)", and in their latest paper with 1061 patients. Unfortunately, it's aggregated data, so it’s insufficient. Individual patient data is necessary to apply algorithms.
+
+  
+
+![](https://paper-attachments.dropbox.com/s_3AEED641DCCE94BAD97655461814D8A7BCFCFF1E38325BF0C342CE79714C0B94_1587480201163_file.jpeg)
+
+![](https://paper-attachments.dropbox.com/s_3AEED641DCCE94BAD97655461814D8A7BCFCFF1E38325BF0C342CE79714C0B94_1587389718650_file.jpeg)
+
+The reason is quite intuitive: to simplify, consider 2 datasets with 2 patients each, and 2 comorbidities: age and obesity. These 2 datasets can be equivalent at the aggregated level, but very different at the individual level. They give different clinical outcomes:
+
+  
+
+![](https://paper-attachments.dropbox.com/s_3AEED641DCCE94BAD97655461814D8A7BCFCFF1E38325BF0C342CE79714C0B94_1587391778239_table.jpg)
+
+  
+
+  
+
+  
+
+Besides IHU Marseille, other initiatives are emerging. For example, the Broad Institute of MIT and Harvard in Cambridge, Massachusetts, is publishing their [COVID-19 Diagnostic Processing Dashboard](https://covid19-testing.broadinstitute.org/). Unfortunately, they don't include a Therapeutics Dashboard yet, which would show patient data and outcomes.
+
+# How to reduce Real-World Data bias: Propensity Score Matching
+
+In order to mimic randomized controlled trials, the key step is to minimize bias between real-world treatment and control arms. To that end, we select appropriate subsets of patients.
+
+  
+
+![](https://paper-attachments.dropbox.com/s_3AEED641DCCE94BAD97655461814D8A7BCFCFF1E38325BF0C342CE79714C0B94_1587423535112_file.jpeg)
+
+  
+
+One way to do that is with Propensity Score Matching. The propensity score is the probability for a patient to belong to the treatment arm, conditionally to his medically relevant features  (age, comorbidities…). In a 1:1 perfectly randomized trial, this probability is 0.5. In real-world data, this probability can be biased. However, balance can be restored by matching patients in treatment and control arms respectively, along their propensity scores.
+
+  
+
+![](https://paper-attachments.dropbox.com/s_3AEED641DCCE94BAD97655461814D8A7BCFCFF1E38325BF0C342CE79714C0B94_1587423555206_file.jpeg)
+
+More precisely, according to a mathematical theorem by Rosenbaum and Rubin, it's sufficient to adjust for propensity scores, if there are no hidden biases due to unobserved features. That's why it's important to collect as much data as possible, from different countries and hospitals, so that hidden biases cancel each other out.
+
+Having data only from Marseille can introduce unexpected confounders. For example, we can imagine that Marseille performance is due to their warm Mediterranean micro-climate, and not to their routine use of chloroquine. Raoult himself conjectured that the epidemic could vanish with spring season.
+
+![](https://paper-attachments.dropbox.com/s_3AEED641DCCE94BAD97655461814D8A7BCFCFF1E38325BF0C342CE79714C0B94_1587470126324_file.jpeg)
+
+# How to estimate propensity score with AI ?
+
+Propensity scores have to be calculated from available data. That's where AI and machine learning come into play. The basic algorithm is logistic regression: the output of this classifier is a probability, between 0 and 1, giving the propensity score of each patient.
+
+  
+
+![](https://paper-attachments.dropbox.com/s_3AEED641DCCE94BAD97655461814D8A7BCFCFF1E38325BF0C342CE79714C0B94_1587479919875_file.jpeg)
+
+Logistic regression can be improved with feature extraction and dimensionality reduction, especially when a lot of features are involved. That's the role of pre-processing algorithms like autoencoders and [deep neural networks](https://arxiv.org/abs/1803.00149).
+
+![](https://paper-attachments.dropbox.com/s_3AEED641DCCE94BAD97655461814D8A7BCFCFF1E38325BF0C342CE79714C0B94_1587479575322_file.jpeg)
+
+  
+
+Finally, there are several methods to make the [matching itself](https://www.statisticshowto.com/propensity-score-matching/). For example, one way is to match each treatment patient with its nearest neighbor in the control dataset, except when they are too far from each other  (distance above a tolerance threshold).
+
+![](https://paper-attachments.dropbox.com/s_3AEED641DCCE94BAD97655461814D8A7BCFCFF1E38325BF0C342CE79714C0B94_1587481235565_file.jpeg)
+
+  
+
+If you are interested to explore the topic further, join our [Medicine & Data Science group on Slack](https://join.slack.com/t/dsformedicine/shared_invite/zt-a9uh4vzq-M1q88L2EDaGe1ESLywqSwg).
