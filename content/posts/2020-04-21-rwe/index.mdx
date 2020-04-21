@@ -1,5 +1,5 @@
 ---
-title: Coronavirus therapeutics - Real-World Evidence with AI can deliver results faster
+title: Coronavirus therapeutics - Real World Evidence with AI can deliver results faster
 author: Mostapha Benhenda
 date: 2020-04-21
 hero: ./images/chloroquine.jpg
@@ -11,17 +11,13 @@ Coronavirus pandemic is all the rage around the world, and so is the race for cu
 
   
 
-However, most clinical results either involve small cohorts, and/or lack a control group.
-
-These methodological weaknesses generate heated controversies on social medias.
-
-![](https://paper-attachments.dropbox.com/s_3AEED641DCCE94BAD97655461814D8A7BCFCFF1E38325BF0C342CE79714C0B94_1587484705883_014-Thumbnail+1+1.png)
+However, most clinical results either involve small cohorts, and/or lack a control group. These methodological weaknesses generate heated controversies on social medias.
 
 # Randomized Controlled Trials vs. Real World Evidence
 
   
 
-These controversies reflect the old methodological debate between Randomized Controlled Trials  (RCT) and Real World Evidence  (RWE)  (for a quick introduction, see [here](https://www.forbes.com/sites/davidshaywitz/2018/05/11/will-real-world-performance-replace-rcts-as-healthcares-most-important-standard/#41eb890f3557), or listen to this [podcast by a16z](https://16minutes.simplecast.com/episodes/16mins-rwe-rct-real-world-evidence-data-randomized-controlled-trial-fda-drugs-coronavirus-pandemic) from 10:21).
+These controversies reflect the old debate between Randomized Controlled Trials  (RCT) and Real World Evidence  (RWE)  (for a quick introduction, see [here](https://www.forbes.com/sites/davidshaywitz/2018/05/11/will-real-world-performance-replace-rcts-as-healthcares-most-important-standard/#41eb890f3557), or listen to this [podcast by a16z](https://16minutes.simplecast.com/episodes/16mins-rwe-rct-real-world-evidence-data-randomized-controlled-trial-fda-drugs-coronavirus-pandemic) from 10:21).
 
   
 
@@ -49,7 +45,7 @@ However, in this direction, some steps are being made. For example, Raoult's IHU
 
 ![](https://paper-attachments.dropbox.com/s_3AEED641DCCE94BAD97655461814D8A7BCFCFF1E38325BF0C342CE79714C0B94_1587389718650_file.jpeg)
 
-The reason is quite intuitive: to simplify, consider 2 datasets with 2 patients each, and 2 comorbidities: age and obesity. These 2 datasets can be equivalent at the aggregated level, but very different at the individual level. They give different clinical outcomes:
+The reason is quite intuitive: to simplify, consider 2 datasets with 2 patients each, and 2 risk factors: age and obesity. These 2 datasets can be equivalent at the aggregated level, but very different at the individual level. They give different clinical outcomes:
 
   
 
@@ -79,7 +75,7 @@ One way to do that is with Propensity Score Matching. The propensity score is th
 
 ![](https://paper-attachments.dropbox.com/s_3AEED641DCCE94BAD97655461814D8A7BCFCFF1E38325BF0C342CE79714C0B94_1587423555206_file.jpeg)
 
-More precisely, according to a mathematical theorem by Rosenbaum and Rubin, it's sufficient to adjust for propensity scores, if there are no hidden biases due to unobserved features. That's why it's important to collect as much data as possible, from different countries and hospitals, so that hidden biases cancel each other out.
+More precisely, according to a mathematical theorem by Rosenbaum and Rubin, it's sufficient to adjust for propensity scores, if there are no hidden biases due to unobserved features. That's why it's important to collect as much data as possible, from different countries and hospitals, so that hidden biases can cancel each other out.
 
 Having data only from Marseille can introduce unexpected confounders. For example, we can imagine that Marseille performance is due to their warm Mediterranean micro-climate, and not to their routine use of chloroquine. Raoult himself conjectured that the epidemic could vanish with spring season.
 
@@ -87,7 +83,7 @@ Having data only from Marseille can introduce unexpected confounders. For exampl
 
 # How to estimate propensity score with AI ?
 
-Propensity scores have to be calculated from available data. That's where AI and machine learning come into play. The basic algorithm is logistic regression: the output of this classifier is a probability, between 0 and 1, giving the propensity score of each patient.
+Propensity scores have to be calculated from available data. That's where AI and machine learning come into play. The basic algorithm is logistic regression: the output of this classifier is a probability, between 0 and 1, corresponding to the propensity score of each patient.
 
   
 
@@ -99,7 +95,7 @@ Logistic regression can be improved with feature extraction and dimensionality r
 
   
 
-Finally, there are several methods to make the [matching itself](https://www.statisticshowto.com/propensity-score-matching/). For example, one way is to match each treatment patient with its nearest neighbor in the control dataset, except when they are too far from each other  (distance above a tolerance threshold).
+Finally, there are several methods to make the [matching](https://www.statisticshowto.com/propensity-score-matching/). For example, one possible way is to match each treatment patient with its nearest neighbor in the control dataset, except when they are too far from each other  (distance above a tolerance threshold).
 
 ![](https://paper-attachments.dropbox.com/s_3AEED641DCCE94BAD97655461814D8A7BCFCFF1E38325BF0C342CE79714C0B94_1587481235565_file.jpeg)
 
