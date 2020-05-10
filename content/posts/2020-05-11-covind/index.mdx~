@@ -1,0 +1,73 @@
+---
+title: COVIND — COVID 19 Individual Patient Data Consortium
+author: Mostapha Benhenda
+date: 2020-05-11
+hero: ./images/chloroquine.jpg
+excerpt: COVIND is a global registry of COVID-19 individual patient data. It accelerates pooling of high-quality patient data
+
+---
+COVIND is a global registry of COVID-19 individual patient data. It accelerates pooling of high-quality patient data, while ensuring the strongest data protection standards.
+
+### Why COVIND?
+
+A lot of clinical studies about COVID-19 are being published. However, most of them only release aggregated cohort data, **without individual patient data**. This makes secondary data analysis much more difficult. For example:
+
+![](https://cdn-images-1.medium.com/max/800/0*KKABcTknxp0WihAp.jpeg)
+
+Clinical outcomes heavily depend on individual patient characteristics, which are **lost by data aggregation**.
+
+For example, these 2 datasets with 2 patients are the same at the aggregated level, but they can still give **different clinical outcomes**:
+
+![](https://cdn-images-1.medium.com/max/800/0*MCUaDhqA4bykMy-n.jpeg)
+
+On the other hand, COVIND database will comprise individual **pseudonymized** data. It will look like:
+
+![](https://cdn-images-1.medium.com/max/800/0*XkDsk47BPG_Sa0b5.jpeg)
+
+We also plan to add **CT scans** and other relevant information from electronic health records.
+
+![](https://cdn-images-1.medium.com/max/800/0*hxwM-EDIT2oJZNQ9.jpeg)
+
+### COVIND use-cases
+
+With COVIND database, we plan to better evaluate **therapies,** such as:
+
+-   Chloroquine
+-   Azithromycin
+-   Tocilizumab
+-   Artemisia
+-   Remdesivir…
+
+![](https://cdn-images-1.medium.com/max/800/0*r9tlm0we3tp8D4mi.jpeg)
+
+We also plan to evaluate **interventions** such as:
+
+-   Extra-Corporeal Membrane Oxygenation
+-   Invasive Ventilation
+-   Helmet Ventilation
+-   High-Flow Nasal Cannula…
+
+![](https://cdn-images-1.medium.com/max/800/0*1L0QA4yahpL8s9EK.jpeg)
+
+These projects will rely on the latest **AI and machine learning** technologies, as outlined in [this article](https://melwy.com/blog/coronavirus-therapeutics-real-world-evidence-with-ai-can-deliver-results-faster).
+
+### COVIND is patient-centered
+
+In addition to their **revocable** and **explicit consent**, patients will be able to monitor impact of their data donation on scientific findings, on a platform suitable for a general audience. This will help them **understand research purposes**. With this pandemic, appetite for research in infectious diseases is growing among the public. Moreover, this platform will facilitate patient **long-term follow-up**.
+
+### COVIND is GDPR-compliant
+
+Data protection is guaranteed by the **European GDPR**, one of the strictest privacy regulations in the world. We can also comply with other local regulations upon request.
+
+![](https://cdn-images-1.medium.com/max/800/0*gndx6f9-lnffSWeN.png)
+
+### Membership benefits for hospitals
+
+-   **Accelerate research** by accessing the consortium network
+-   **Upgrade hospital IT infrastructure**, with state-of-the-art technologies in **artificial intelligence** and **big data**
+
+To **join the consortium** as a doctor, sponsor or partner, drop a message to [Mostapha Benhenda](mailto:mostapha@melwy.com) (mostapha@melwy.com), or [fill the form](https://forms.gle/rbYXpWbe2gJ7bUZ48).
+
+### Members (To Be Announced)
+
+
